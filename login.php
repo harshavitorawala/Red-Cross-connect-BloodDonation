@@ -6,10 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = isset($_POST["email"]) ? htmlspecialchars($_POST["email"]) : "";
     $password = isset($_POST["password"]) ? $_POST["password"] : "";
 
-    $servername = "localhost";
-    $username = "root";
-    $dbpassword = "1234";
-    $dbname = "web";
+    $servername = "YOUR_SERVER_NAME";
+    $username = "YOUR_USERNAME";
+    $dbpassword = "YOUR_DATABASE_PASSWORD";
+    $dbname = "DATABASE_NAME";
     $conn = new mysqli($servername, $username, $dbpassword, $dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
