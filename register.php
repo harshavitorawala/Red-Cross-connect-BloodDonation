@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $area = isset($_POST["area"]) ? htmlspecialchars($_POST["area"]) : "";
     $landmarks = isset($_POST["landmarks"]) ? htmlspecialchars($_POST["landmarks"]) : "";
 
-    $servername = "localhost";
-    $username = "root";
-    $dbpassword = "1234";
-    $dbname = "web";
+    $servername = "YOUR_SERVER_NAME";
+    $username = "YOUR_USER_NAME";
+    $dbpassword = "YOUR_PASSWORD";
+    $dbname = "DATABASE_NAME";
     $conn = new mysqli($servername, $username, $dbpassword, $dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
